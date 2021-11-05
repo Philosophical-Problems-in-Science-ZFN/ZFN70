@@ -95,13 +95,15 @@
 \usepackage{tikz-cd}
 \usetikzlibrary{babel}
 \usepackage[title]{appendix}
-\PassOptionsToPackage{hyphens}{url}%
+
+
+\usepackage[hyphens,spaces,obeyspaces]{url}
 \usepackage{hyperref} %to nowsza wersja pakietu url, lepsza m.in. robie linki hyperref
 \hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black, breaklinks=true, linktocpage}  %to sprawia że nie widać w pdfie aktywnych linków (od GM)
 \urlstyle{rm}
 %\usepackage[hyphens]{url}
+%\PassOptionsToPackage{hyphens}{url}%
 %\RequirePackage[hyphens]{url}
-
 
 
 
@@ -910,6 +912,11 @@ maxbibnames=4,
 backend=biber]{biblatex}
 %uwaga ustew biber jako program do biliografii lub" pdflatex -> biber -> pdflatex -> pdflatex
 %readme: ftp://sunsite.icm.edu.pl/pub/CTAN/macros/latex/contrib/biblatex/doc/biblatex.pdf
+
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
+
 \usepackage[autostyle=true]{csquotes}
 
 
